@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <style>
+        .video-container {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+            overflow: hidden; 
+        }
+        .video-container video {
+            width: 100%; 
+            height: 100%;
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="about.html">about</a></li>
+            <li><a href="order.html">orders</a></li>
+            <li><a href="contact.html">contact</a></li>
+    </ul>
+    <center>
+        <h1>Contact us</h1>
+        <form id="contactForm" action="thank.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
+            
+            <label for="mobile">Mobile no:</label>
+            <input type="tel" id="mobile" name="mobile"><br>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <div class="video-container">
+            <video autoplay muted loop id="video-background">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </center>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var mobile = document.getElementById('mobile').value;
+            var message = document.getElementById('message').value;
+            if (name.trim() === '' || message.trim() === '') {
+                alert('Name and Message are required fields.');
+                return false;
+            }
+            if (isNaN(mobile) || mobile.length !== 10) {
+                alert('Please enter a valid 10-digit mobile number.');
+                return false;
+            }
+
+            return true;
+        }
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            } else {
+                <a class="nav-link" href="thank.html">thankyou</a>
+            }
+        });
+    </script>
+</body>
+</html>
+

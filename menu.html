@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Ice Cream Parlor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+.video-container {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    overflow: hidden; 
+}
+.video-container video {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+</style>
+<body>
+    <ul>
+        <li><a href="menu.html">menu</a></li>
+        <li><a href="about.html">about</a></li>
+            <li><a href="order.html">orders</a></li>
+            <li><a href="contact.html">contact</a></li>
+    </ul>
+    <div class="container">
+        <h2>Our Menu</h2>
+        <p>Here are some of our delicious flavors:</p>
+        <ul>
+            <li>Vanilla</li>
+            <li>Chocolate</li>
+            <li>Strawberry</li>
+            <li>Mint Chocolate Chip</li>
+            <li>Cookies and Cream</li>
+        </ul>
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="6 NEW Ice Cream Flavors_ Homemade Ice Cream PARTY! (No Machine) - Gemma's Bigger Bolder Baking.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
